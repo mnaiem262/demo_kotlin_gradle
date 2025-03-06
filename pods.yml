@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: demo_kotlin_gradle
+spec:
+  containers:
+  - name: my-container
+    image: mnaiem262/demo_kotlin_gradle:1.0
+    ports:
+    - containerPort: 8080
