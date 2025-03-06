@@ -17,5 +17,5 @@ jobs:
     - name: Build Docker image
       run: docker build -t mnaiem262/demo_kotlin_gradle:1.1 .
     - name: Push Docker image
-      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      run: echo ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
     - run: docker push mnaiem262/demo_kotlin_gradle:1.1 
